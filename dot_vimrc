@@ -1,1 +1,11 @@
 " My vimrc file!
+
+call plug#begin()
+" The default plugin directory will be as follows:
+"   - Vim (Linux/macOS): '~/.vim/plugged'
+
+" Make sure you use single quotes
+Plug 'morhetz/gruvbox'
+
+" Initialize plugin system
+call plug#end()
