@@ -73,6 +73,7 @@ ZSH_THEME="hyperzsh"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+source "$HOME/.vim/plugged/gruvbox/gruvbox_256palette_osx.sh"
 
 # User configuration
 
