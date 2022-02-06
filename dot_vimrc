@@ -2,6 +2,15 @@
 
 "Global configs
 set noswapfile
+let g:netrw_banner = 0 "remove directory banner
+
+"Tab
+set smartindent
+set autoindent
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
 syntax on
 syntax enable
 " Switch syntax highlighting on, when the terminal has colors
