@@ -117,6 +117,10 @@ function dot {
 		chezmoi apply
 		return 0
 	fi
+	if [[ "$1" == "update" ]]; then
+		chezmoi update
+		return 0
+	fi
 	chezmoi "$1" ~/."$2"
 }
 
