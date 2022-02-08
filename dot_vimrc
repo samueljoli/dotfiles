@@ -2,7 +2,22 @@
 
 "Global configs
 set noswapfile
+
+"File directory
 let g:netrw_banner = 0 "remove directory banner
+let g:netrw_browse_split = 2 "open files in a new vertical split
+let g:netrw_winsize = 25 "set directory window to 25% of screen
+
+"File navigation
+set relativenumber
+set rnu
+
+"Mappings
+"<CTRL + j/k/h/l to switch panes
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
 
 "Tab
 set smartindent
@@ -10,6 +25,8 @@ set autoindent
 set tabstop=2
 set shiftwidth=2
 set expandtab
+
+set backspace=indent,eol,start "Fix delete in insert mode
 
 syntax on
 syntax enable
