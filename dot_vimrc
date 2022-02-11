@@ -11,6 +11,10 @@ let g:netrw_winsize = 75 "set directory window to 25% of screen
 "File navigation
 set relativenumber
 set rnu
+set ruler " show the cursor position all the time
+set number
+set numberwidth=5
+set mouse=a       " Allow scrolling using mousepad
 
 "Tab
 set smartindent
@@ -19,9 +23,17 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+" GF (Go to file)
+set path+=$PWD/node_modules " Enable jumping into node_modules
+
+set laststatus=2  " Always display the status line
+set autowrite     " Automatically :write before running commands
+
 set backspace=indent,eol,start "Fix delete in insert mode
 
 set hlsearch "Highlight all search matches
+
+set re=0 "Set redraw to 0. Configured because Typescript syntax highlighting is broken
 
 " -------------------- Mappings --------------------
 "<CTRL + j/k/h/l to switch panes
