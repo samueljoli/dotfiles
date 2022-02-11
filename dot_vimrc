@@ -5,8 +5,10 @@ set noswapfile
 
 "File directory
 let g:netrw_banner = 0 "remove directory banner
-let g:netrw_browse_split = 2 "open files in a new vertical split
-let g:netrw_winsize = 75 "set directory window to 25% of screen
+let g:netrw_browse_split = 4 "open files in a new vertical split
+let g:netrw_winsize = 25 "set directory window to 25% of screen
+let g:netrw_liststyle = 3 "set list view style to 3
+let g:netrw_altv = 1 "?
 
 "File navigation
 set relativenumber
