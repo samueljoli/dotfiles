@@ -75,6 +75,9 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 source "$HOME/.vim/plugged/gruvbox/gruvbox_256palette_osx.sh"
 
+code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;} # Launch VS Code
+
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
