@@ -44,6 +44,7 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+" -------------------- Syntax --------------------
 syntax on
 syntax enable
 " Switch syntax highlighting on, when the terminal has colors
@@ -52,6 +53,7 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
 
+" -------------------- Plugins  --------------------
 call plug#begin()
 " The default plugin directory will be as follows:
 "   - Vim (Linux/macOS): '~/.vim/plugged'
@@ -59,8 +61,12 @@ call plug#begin()
 " Make sure you use single quotes
 Plug 'morhetz/gruvbox'
 Plug 'jelera/vim-javascript-syntax'
+Plug 'frazrepo/vim-rainbow'
+
 " Initialize plugin system
 call plug#end()
 
 let g:gruvbox_contrast_dark = "hard"
 colorscheme gruvbox
+let g:rainbow_active = 1
+let g:rainbow_ctermfgs = ['blue', 'darkgray', 'lightgreen']
