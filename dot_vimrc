@@ -64,8 +64,9 @@ call plug#begin()
 
 " Make sure you use single quotes
 Plug 'morhetz/gruvbox'
-Plug 'jelera/vim-javascript-syntax'
 Plug 'luochen1990/rainbow'
+Plug 'sheerun/vim-polyglot'
+
 
 " Initialize plugin system
 call plug#end()
