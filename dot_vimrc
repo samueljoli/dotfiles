@@ -61,7 +61,7 @@ call plug#begin()
 " Make sure you use single quotes
 Plug 'morhetz/gruvbox'
 Plug 'jelera/vim-javascript-syntax'
-Plug 'frazrepo/vim-rainbow'
+Plug 'luochen1990/rainbow'
 
 " Initialize plugin system
 call plug#end()
@@ -69,4 +69,6 @@ call plug#end()
 let g:gruvbox_contrast_dark = "hard"
 colorscheme gruvbox
 let g:rainbow_active = 1
-let g:rainbow_ctermfgs = ['blue', 'darkgray', 'lightgreen']
+let g:rainbow_conf = {
+\	'ctermfgs': ['blue', 'darkgray', 'lightgray']
+\}
