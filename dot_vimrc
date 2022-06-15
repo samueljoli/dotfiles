@@ -78,6 +78,7 @@ call plug#begin()
 Plug 'morhetz/gruvbox'
 Plug 'luochen1990/rainbow'
 Plug 'sheerun/vim-polyglot'
+Plug 'jelera/vim-javascript-syntax'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
@@ -91,3 +92,4 @@ let g:rainbow_active = 1
 let g:rainbow_conf = {
 \	'ctermfgs': ['blue', 'darkgray', 'lightgray']
 \}
+let g:polyglot_disabled = ['javascript.plugin']
