@@ -3,12 +3,18 @@
 " -------------------- Global configs --------------------
 set noswapfile
 
+" Load zshrc alias commands in vim (EXPERIMENTAL)
+" autocmd vimenter * let &shell='/bin/zsh -i'
+
 "File directory
 let g:netrw_banner = 0 "remove directory banner
 let g:netrw_winsize = 25 "set directory window to 25% of screen
 let g:netrw_liststyle = 3 "set list view style to 3
 let g:netrw_altv = 1 "?
 " let g:netrw_browse_split = 0 "close directory when opening a file
+" If you don't have a hide list and just want to use gh's:
+let ghregex='\(^\|\s\s\)\zs\.\S\+'
+let g:netrw_list_hide=ghregex
 
 
 "File navigation
