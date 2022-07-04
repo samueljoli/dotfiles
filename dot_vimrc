@@ -75,18 +75,25 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
 
+" let g:polyglot_disabled = ['javascript.plugin']
+let g:vim_svelte_plugin_use_sass = 1
+
 " -------------------- Plugins  --------------------
 call plug#begin()
 " The default plugin directory will be as follows:
 "   - Vim (Linux/macOS): '~/.vim/plugged'
 
 " Make sure you use single quotes
-Plug 'morhetz/gruvbox'
-Plug 'luochen1990/rainbow'
-Plug 'sheerun/vim-polyglot'
-Plug 'jelera/vim-javascript-syntax'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'morhetz/gruvbox'                              " colorscheme
+Plug 'luochen1990/rainbow'                          " colored brackets
+Plug 'sheerun/vim-polyglot'                         " language syntax highlighting
+Plug 'jelera/vim-javascript-syntax'                 " JS syntax highlighting
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " fuzzy finder
 Plug 'junegunn/fzf.vim'
+Plug 'garbas/vim-snipmate'                          " snippets
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'honza/vim-snippets'
 
 
 " Initialize plugin system
@@ -98,4 +105,4 @@ let g:rainbow_active = 1
 let g:rainbow_conf = {
 \	'ctermfgs': ['blue', 'darkgray', 'lightgray']
 \}
-let g:polyglot_disabled = ['javascript.plugin']
+let g:snipMate = { 'snippet_version' : 1 }
