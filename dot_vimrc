@@ -1,4 +1,41 @@
-" My vimrc file!
+" -----------------------------------------------------------------------------
+" Vim >= 8. This assume you to have Plug installed.
+" -----------------------------------------------------------------------------
+
+" -----------------------------------------------------------------------------
+" Plugins
+" -----------------------------------------------------------------------------
+call plug#begin()
+
+Plug 'morhetz/gruvbox'                              " colorscheme
+Plug 'luochen1990/rainbow'                          " colored brackets
+Plug 'sheerun/vim-polyglot'                         " language syntax highlighting
+Plug 'jelera/vim-javascript-syntax'                 " JS syntax highlighting
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " fuzzy finder
+Plug 'junegunn/fzf.vim'
+Plug 'garbas/vim-snipmate'                          " snippets
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'honza/vim-snippets'
+Plug 'vim-scripts/AutoComplPop'                     " Show autocomplete menu Automatically
+Plug 'tomtom/tcomment_vim'                          " Commenting
+Plug 'tpope/vim-surround'                           " surroundings: parentheses, brackets, quotes, etc
+
+call plug#end()
+
+function! GetSnipsInCurrentScope()
+    let word = matchstr(getline('.'), '\S\+\%'.col('.').'c')
+    let list = snipMate#GetSnippetsForWordBelowCursor('', '*',  0)
+    let result = {}
+    for [trigger, snips] in list
+        if len(snips) == 1
+            let result[trigger] = values(snips)[0]
+        else
+            let result[trigger] = items(snips)
+        endif
+    endfor
+    return result
+endfunction
 
 " -------------------- Global configs --------------------
 set noswapfile
@@ -52,7 +89,7 @@ noremap <C-h> <C-W>h
 noremap <C-l> <C-W>l
 
 " Tab complete
-inoremap <Tab> <C-P>
+" inoremap <Tab> <C-P>
 
 " map leader to spacebar
 let mapleader = "\<Space>"
@@ -77,27 +114,6 @@ endif
 
 " let g:polyglot_disabled = ['javascript.plugin']
 let g:vim_svelte_plugin_use_sass = 1
-
-" -------------------- Plugins  --------------------
-call plug#begin()
-" The default plugin directory will be as follows:
-"   - Vim (Linux/macOS): '~/.vim/plugged'
-
-" Make sure you use single quotes
-Plug 'morhetz/gruvbox'                              " colorscheme
-Plug 'luochen1990/rainbow'                          " colored brackets
-Plug 'sheerun/vim-polyglot'                         " language syntax highlighting
-Plug 'jelera/vim-javascript-syntax'                 " JS syntax highlighting
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " fuzzy finder
-Plug 'junegunn/fzf.vim'
-Plug 'garbas/vim-snipmate'                          " snippets
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'honza/vim-snippets'
-
-
-" Initialize plugin system
-call plug#end()
 
 let g:gruvbox_contrast_dark = "hard"
 colorscheme gruvbox
