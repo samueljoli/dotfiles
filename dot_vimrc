@@ -20,6 +20,7 @@ Plug 'honza/vim-snippets'
 Plug 'vim-scripts/AutoComplPop'                     " Show autocomplete menu Automatically
 Plug 'tomtom/tcomment_vim'                          " Commenting
 Plug 'tpope/vim-surround'                           " surroundings: parentheses, brackets, quotes, etc
+Plug 'neoclide/coc.nvim', {'branch': 'release'}     " LSP language server protocol
 
 call plug#end()
 
