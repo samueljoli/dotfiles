@@ -22,6 +22,7 @@ Plug 'tomtom/tcomment_vim'                          " Commenting
 Plug 'tpope/vim-surround'                           " surroundings: parentheses, brackets, quotes, etc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}     " LSP language server protocol
 Plug 'puremourning/vimspector'                      " Debugger integration
+Plug 'davidhalter/jedi-vim'                         " Python autocompletion
 
 call plug#end()
 
@@ -150,7 +151,24 @@ let g:coc_snippet_next = '<tab>'
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 let g:coc_disable_startup_warning = 1
+let g:coc_global_extensions = ["coc-pyright", "coc-sh", "coc-cmake", "coc-go", "coc-markdownlint", "coc-tsserver", "coc-json"]
 
+nnoremap <silent> <leader>cl :CocDiagnostics<cr>
+nnoremap <silent> <leader>ch :call CocAction('doHover')<cr>
+nnoremap <silent> <leader>cf <plug>(coc-codeaction-cursor)
+nnoremap <silent> <leader>ca <plug>(coc-fix-current)
+
+nmap <silent> [c <plug>(coc-diagnostic-prev)
+nmap <silent> ]c <plug>(coc-diagnostic-next)
+
+
+nnoremap <silent> <leader>cl :CocDiagnostics<cr>
+nnoremap <silent> <leader>ch :call CocAction('doHover')<cr>
+nnoremap <silent> <leader>cf <plug>(coc-codeaction-cursor)
+nnoremap <silent> <leader>ca <plug>(coc-fix-current)
+
+nmap <silent> [c <plug>(coc-diagnostic-prev)
+nmap <silent> ]c <plug>(coc-diagnostic-next)
 
 " ======================== Vimspector ========================
 
