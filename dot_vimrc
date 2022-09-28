@@ -14,13 +14,14 @@ Plug 'jelera/vim-javascript-syntax'                 " JS syntax highlighting
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " fuzzy finder
 Plug 'junegunn/fzf.vim'
 Plug 'garbas/vim-snipmate'                          " snippets
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
+Plug 'MarcWeber/vim-addon-mw-utils'                 " -- snippets dep
+Plug 'tomtom/tlib_vim'                              " -- snippets dep
 Plug 'honza/vim-snippets'
 Plug 'vim-scripts/AutoComplPop'                     " Show autocomplete menu Automatically
 Plug 'tomtom/tcomment_vim'                          " Commenting
 Plug 'tpope/vim-surround'                           " surroundings: parentheses, brackets, quotes, etc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}     " LSP language server protocol
+Plug 'puremourning/vimspector'                      " Debugger integration
 
 call plug#end()
 
@@ -126,21 +127,38 @@ let g:rainbow_conf = {
 \}
 let g:snipMate = { 'snippet_version' : 1 }
 
-" >>> Coc <<<
+
+" ======================== Coc ========================
+
+" https://github.com/neoclide/coc-snippets
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-
 inoremap <silent><expr> <TAB>
       \ coc#pum#visible() ? coc#_select_confirm() :
       \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
       \ CheckBackSpace() ? "\<TAB>" :
       \ coc#refresh()
-
 function! CheckBackSpace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-
 let g:coc_snippet_next = '<tab>'
+" Use `[g` and `]g` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+let g:coc_disable_startup_warning = 1
+
+
+" ======================== Vimspector ========================
+
+nnoremap <leader>da :call vimspector#Launch()<CR>
+nnoremap <leader>dx :call vimspector#Reset()<CR>
+nnoremap <leader>dh :call vimspector#ToggleBreakpoint()<CR>
+nnoremap <S-j> :call vimspector#StepOver()<CR>
+nnoremap <S-k> :call vimspector#StepOut()<CR>
+nnoremap <S-l> :call vimspector#StepInto()<CR>
+
+let g:vimspector_base_dir = expand('$HOME/.config/vimspector')
