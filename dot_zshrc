@@ -132,6 +132,12 @@ function sniff {
   lsof -i TCP:"$1"
 }
 
+function docker-clean {
+    echo "Removing docker images"
+    docker ps -aq | xargs docker rm -f
+    docker images -f "dangling=true" -q | xargs docker rmi
+}
+
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
