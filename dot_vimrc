@@ -23,6 +23,7 @@ Plug 'tpope/vim-surround'                           " surroundings: parentheses,
 Plug 'neoclide/coc.nvim', {'branch': 'release'}     " LSP language server protocol
 Plug 'puremourning/vimspector'                      " Debugger integration
 Plug 'davidhalter/jedi-vim'                         " Python autocompletion
+Plug 'mhinz/vim-signify'                            " Git diff
 
 call plug#end()
 
