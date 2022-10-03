@@ -85,7 +85,10 @@ set hlsearch "Highlight all search matches
 
 set re=0 "Set redraw to 0. Configured because Typescript syntax highlighting is broken
 
-
+" open new windows below the current window
+set splitbelow
+" open new windowns to the right
+set splitright
 
 " -------------------- Mappings --------------------
 " j/k/h/l to switch panes
