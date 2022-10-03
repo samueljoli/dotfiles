@@ -85,6 +85,8 @@ set hlsearch "Highlight all search matches
 
 set re=0 "Set redraw to 0. Configured because Typescript syntax highlighting is broken
 
+
+
 " -------------------- Mappings --------------------
 " j/k/h/l to switch panes
 noremap <C-j> <C-W>j
@@ -106,6 +108,10 @@ noremap <C-f> :Files<Enter>
 
 " open silver searcher for word under cursor
 nnoremap <silent> <Leader>ag :Ag <C-R><C-W><CR>
+
+" terminal
+map <Leader>t :term ++close<CR>
+tmap <Leader>t <c-w>:term ++close<CR>
 
 " -------------------- Syntax --------------------
 syntax on
@@ -181,3 +187,17 @@ nnoremap <S-k> :call vimspector#StepOut()<CR>
 nnoremap <S-l> :call vimspector#StepInto()<CR>
 
 let g:vimspector_base_dir = expand('$HOME/.config/vimspector')
+
+" ======================== Jedi ========================
+
+" let g:jedi#auto_initialization = 0
+let g:jedi#use_splits_not_buffers = "left"
+let g:jedi#goto_command = "<leader>d"
+let g:jedi#goto_assignments_command = "<leader>g"
+let g:jedi#goto_stubs_command = "<leader>s"
+let g:jedi#goto_definitions_command = ""
+let g:jedi#documentation_command = "K"
+let g:jedi#usages_command = "<leader>n"
+let g:jedi#completions_command = "<C-Space>"
+let g:jedi#rename_command = "<leader>r"
+
