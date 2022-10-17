@@ -184,7 +184,7 @@ nmap <silent> ]c <plug>(coc-diagnostic-next)
 nnoremap <silent> <leader>gb :Git blame<cr>
 nnoremap <silent> <leader>gb :Git blame<cr>
 nnoremap <silent> <leader>gy :.GBrowse!<CR>
-xnoremap <silent> <leader>gy :'<'>GBrowse!<CR>
+xnoremap <silent> <leader>gy :.GBrowse!<CR>
 
 " ======================== Vimspector ========================
 
