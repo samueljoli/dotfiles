@@ -24,6 +24,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}     " LSP language server protoc
 Plug 'puremourning/vimspector'                      " Debugger integration
 Plug 'davidhalter/jedi-vim'                         " Python autocompletion
 Plug 'mhinz/vim-signify'                            " Git diff
+Plug 'psf/black', { 'branch': 'stable' }            " Python formatter
 
 call plug#end()
 
@@ -204,3 +205,9 @@ let g:jedi#usages_command = "<leader>n"
 let g:jedi#completions_command = "<C-Space>"
 let g:jedi#rename_command = "<leader>r"
 
+" ======================== Black (python) ========================
+" format on save
+augroup black_on_save
+  autocmd!
+  autocmd BufWritePre *.py Black
+augroup end
