@@ -26,6 +26,7 @@ Plug 'davidhalter/jedi-vim'                         " Python autocompletion
 Plug 'mhinz/vim-signify'                            " Git diff
 Plug 'psf/black', { 'branch': 'stable' }            " Python formatter
 Plug 'tpope/vim-fugitive'                           " Git
+Plug 'tpope/vim-rhubarb'                            " Hub for Git (enables :GBrowse from vim-fugitive)
 
 call plug#end()
 
@@ -181,6 +182,9 @@ nmap <silent> ]c <plug>(coc-diagnostic-next)
 
 " ======================== Fugitive ========================
 nnoremap <silent> <leader>gb :Git blame<cr>
+nnoremap <silent> <leader>gb :Git blame<cr>
+nnoremap <silent> <leader>gy :.GBrowse!<CR>
+xnoremap <silent> <leader>gy :'<'>GBrowse!<CR>
 
 " ======================== Vimspector ========================
 
