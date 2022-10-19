@@ -218,3 +218,7 @@ augroup black_on_save
   autocmd!
   autocmd BufWritePre *.py Black
 augroup end
+
+" ======================== ALE ========================
+" Set this variable to 1 to fix files when you save them.
+let g:ale_fix_on_save = 1
