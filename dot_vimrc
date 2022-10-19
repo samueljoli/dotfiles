@@ -27,6 +27,7 @@ Plug 'mhinz/vim-signify'                            " Git diff
 Plug 'psf/black', { 'branch': 'stable' }            " Python formatter
 Plug 'tpope/vim-fugitive'                           " Git
 Plug 'tpope/vim-rhubarb'                            " Hub for Git (enables :GBrowse from vim-fugitive)
+Plug 'dense-analysis/ale'                           " Linting LSP client
 
 call plug#end()
 
@@ -149,7 +150,7 @@ let g:snipMate = { 'snippet_version' : 1 }
 
 " https://github.com/neoclide/coc-snippets
 nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gt <Plug>(coc-type-definition)
+nmap <silent> td <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 inoremap <silent><expr> <TAB>
@@ -173,6 +174,7 @@ nnoremap <silent> <leader>cl :CocDiagnostics<cr>
 nnoremap <silent> <leader>ch :call CocAction('doHover')<cr>
 nnoremap <silent> <leader>cf <plug>(coc-codeaction-cursor)
 nnoremap <silent> <leader>ca <plug>(coc-fix-current)
+nmap <leader>rn <Plug>(coc-rename)
 
 nmap <silent> [c <plug>(coc-diagnostic-prev)
 nmap <silent> ]c <plug>(coc-diagnostic-next)
