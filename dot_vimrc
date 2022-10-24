@@ -1,8 +1,28 @@
 " -----------------------------------------------------------------------------
-" Vim >= 8. This assume you to have Plug installed.
+"                     .
+    ##############..... ##############
+    ##############......##############
+      ##########..........##########
+      ##########........##########
+      ##########.......##########
+      ##########.....##########..
+      ##########....##########.....
+    ..##########..##########.........
+  ....##########.#########.............
+    ..################JJJ............
+      ################.............
+      ##############.JJJ.JJJJJJJJJJ
+      ############...JJ...JJ..JJ  JJ
+      ##########....JJ...JJ..JJ  JJ
+      ########......JJJ..JJJ JJJ JJJ
+      ######    .........
+                  .....
+                    .
+
+" maintained by: Samuel Joli
 " -----------------------------------------------------------------------------
 
-source $HOME/.vim/init/pre.vimrc               " pre configurations
-source $HOME/.vim/init/plug.vimrc              " plugin loader
-source $HOME/.vim/init/general.vimrc           " Plugin specific configurations
+source $HOME/.vim/init/pre.vimrc               " Pre configurations
+source $HOME/.vim/init/plug.vimrc              " Plugin loader
+source $HOME/.vim/init/general.vimrc           " General vim settings
 source $HOME/.vim/init/plugins/settings.vimrc  " Plugin specific configurations
