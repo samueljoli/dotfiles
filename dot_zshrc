@@ -132,6 +132,13 @@ function sniff {
   lsof -i TCP:"$1"
 }
 
+function profile_vim {
+    echo "...profiling vim"
+    python <(curl -sSL https://raw.githubusercontent.com/hyiltiz/vim-plugins-profile/master/vim-plugins-profile.py)
+    echo "thank you hyiltiz/vim-plugins-profile"
+}
+
+
 function docker-clean {
     echo "Removing docker images"
     docker ps -aq | xargs docker rm -f
