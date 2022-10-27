@@ -8,6 +8,8 @@ let mapleader = "\<Space>"
 " Theme
 let g:gruvbox_contrast_dark = "hard"
 colorscheme gruvbox
+set colorcolumn=110
+highlight ColorColumn ctermbg=darkgray
 
 " File directory
 let g:netrw_banner = 0 " ---------------- remove directory banner
@@ -16,6 +18,11 @@ let g:netrw_liststyle = 3 " ------------- set list view style to 3
 let g:netrw_altv = 1 " ------------------ open file in vertical split
 let ghregex='\(^\|\s\s\)\zs\.\S\+' " ---- regex for ignoring files
 let g:netrw_list_hide=ghregex " --------- set regex
+" let g:netrw_browse_split = 4
+" augroup ProjectDrawer
+"   autocmd!
+"   autocmd VimEnter * :Vexplore
+" augroup END
 
 " File navigation
 set relativenumber " -------------------- line numbers relative to cursor
