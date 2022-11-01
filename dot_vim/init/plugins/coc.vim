@@ -36,3 +36,14 @@ nmap <silent> ]c <plug>(coc-diagnostic-next)
 
 nmap <silent> [c <plug>(coc-diagnostic-prev)
 nmap <silent> ]c <plug>(coc-diagnostic-next)
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call ShowDocumentation()<CR>
+
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
+  endif
+endfunction
