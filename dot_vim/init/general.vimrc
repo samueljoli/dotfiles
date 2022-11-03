@@ -30,6 +30,7 @@ set ruler " ----------------------------- show the cursor position all the time
 set number " ---------------------------- show line numbers
 set numberwidth=5 " --------------------- minimal number of columns to use for the line number
 set mouse=a " --------------------------- allow scrolling using mousepad
+set cursorline " ------------------------ cursor line
 
 " Tab
 set smartindent " ----------------------- smart indenting when starting a new line
@@ -55,8 +56,9 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
 endif
 
 " Search
-set incsearch " --------------------------- Find the next match as we type the search
-set hlsearch " ---------------------------- Highlight all search matches
+set incsearch "    --------------------------- Find the next match as we type the search
+set hlsearch "     --------------------------- Highlight all search matches
+set shortmess-=S " --------------------------- No shortening of messages (turned on to enable highlight search count)
 
 " GF (Go to file)
 set path+=$PWD/node_modules " Enable jumping into node_modules
