@@ -76,7 +76,8 @@ noremap <C-j> <C-W>j
 noremap <C-k> <C-W>k
 noremap <C-h> <C-W>h
 noremap <C-l> <C-W>l
-" open terminal
-map <Leader>t :term ++close<CR>
-tmap <Leader>t <c-w>:term ++close<CR>
+
+" Terminal
+nnoremap <silent> T :term ++close<CR>
+
 nnoremap <silent> <leader>e :exit<cr>
