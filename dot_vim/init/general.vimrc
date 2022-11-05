@@ -10,6 +10,9 @@ let g:gruvbox_contrast_dark = "hard"
 colorscheme gruvbox
 set colorcolumn=110
 highlight ColorColumn ctermbg=darkgray
+set termguicolors
+let &t_ut=''
+set bg=dark
 
 " File directory
 let g:netrw_banner = 0 " ---------------- remove directory banner
