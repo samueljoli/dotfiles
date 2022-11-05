@@ -105,6 +105,7 @@ code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;} # Lau
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias tf="terraform"
+alias kd="git difftool --no-symlinks --dir-diff"
 
 # Helpful functions
 # alias function for chezmoi

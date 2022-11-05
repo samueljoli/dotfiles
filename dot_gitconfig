@@ -1,3 +1,13 @@
 [user]
 	name = Samuel Joli
-	email = samuel.joli.ftn@gmail.com
+    email = samuel.joli.ftn@gmail.com
+[diff]
+    tool = kitty
+    guitool = kitty.gui
+[difftool]
+    prompt = false
+    trustExitCode = true
+[difftool "kitty"]
+    cmd = kitty +kitten diff $LOCAL $REMOTE
+[difftool "kitty.gui"]
+    cmd = kitty kitty +kitten diff $LOCAL $REMOTE
