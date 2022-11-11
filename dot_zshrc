@@ -137,6 +137,10 @@ function sniff {
   lsof -i TCP:"$1"
 }
 
+function _scan {
+    zsh -ixc : 2>&1 | grep "$1"
+}
+
 function profile_vim {
     echo "...profiling vim"
     python <(curl -sSL https://raw.githubusercontent.com/hyiltiz/vim-plugins-profile/master/vim-plugins-profile.py)
