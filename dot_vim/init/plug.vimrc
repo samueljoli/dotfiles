@@ -25,5 +25,7 @@ Plug 'tpope/vim-fugitive'                           " Git
 Plug 'tpope/vim-rhubarb'                            " Hub for Git (enables :GBrowse from vim-fugitive)
 Plug 'dense-analysis/ale'                           " Linting LSP client
 Plug 'fladson/vim-kitty'                            " Syntax highlighting for kitty
+Plug 'vim-airline/vim-airline'                      " Status bar
+Plug 'vim-airline/vim-airline-themes'               " Status bar themes
 
 call plug#end()
