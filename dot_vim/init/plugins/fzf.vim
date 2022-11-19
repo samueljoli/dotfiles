@@ -16,10 +16,10 @@ endfunction
 autocmd VimEnter * command! -nargs=* -bang Ag call s:ag_with_opts(<q-args>, <bang>0)
 
 " map control + p for word search
-nnoremap <silent> <Leader>w :Ag<Enter>
+nnoremap <Leader>w :Ag -w<Space>
 
 " map control + f for file search
 nnoremap <silent> <Leader>f :Files<Enter>
 
 " open silver searcher for word under cursor
-nnoremap <silent> <Leader>ag :Ag <C-R><C-W><CR>
+nnoremap <silent> <Leader>ag :Ag -w <C-R><C-W><CR>
