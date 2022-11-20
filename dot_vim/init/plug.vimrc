@@ -27,5 +27,6 @@ Plug 'dense-analysis/ale'                           " Linting LSP client
 Plug 'fladson/vim-kitty'                            " Syntax highlighting for kitty
 Plug 'vim-airline/vim-airline'                      " Status bar
 Plug 'vim-airline/vim-airline-themes'               " Status bar themes
+Plug 'tpope/vim-vinegar'                            " file explorer
 
 call plug#end()
