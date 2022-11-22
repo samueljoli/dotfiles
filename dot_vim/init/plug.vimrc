@@ -10,7 +10,6 @@ Plug 'sheerun/vim-polyglot'                         " language syntax highlighti
 Plug 'jelera/vim-javascript-syntax'                 " JS syntax highlighting
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " fuzzy finder
 Plug 'junegunn/fzf.vim'
-Plug 'garbas/vim-snipmate'                          " snippets
 Plug 'MarcWeber/vim-addon-mw-utils'                 " -- snippets dep
 Plug 'tomtom/tlib_vim'                              " -- snippets dep
 Plug 'honza/vim-snippets'
