@@ -31,5 +31,6 @@ Plug 'Raimondi/delimitMate'                         " Automatic closing of quote
 Plug 'xolox/vim-misc'                               " Vim sessions
 Plug 'xolox/vim-session'
 Plug 'Yggdroot/indentLine'                          " Display thin vertical lines at each indentation level
+Plug 'vim-scripts/CSApprox'                         " Makes GVim-only colorschemes Just Work in terminal Vim
 
 call plug#end()
