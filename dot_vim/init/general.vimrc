@@ -5,14 +5,30 @@
 " Leader
 let mapleader = "\<Space>"
 
+" Encoding
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8
+set ttyfast
+
+" Fix backspace indent
+set backspace=indent,eol,start
+
 " Theme
 let g:gruvbox_contrast_dark = "hard"
 colorscheme gruvbox
 set colorcolumn=110
 highlight ColorColumn ctermbg=darkgray
 set termguicolors
-let &t_ut=''
 set bg=dark
+set term=xterm-256color
+if &term =~ '256color'
+  set t_ut=
+endif
+set title
+set titleold="Terminal"
+set titlestring=%F
+set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\%{fugitive#statusline()}
 
 " File directory
 let g:netrw_banner = 0 " ---------------- remove directory banner
@@ -84,3 +100,13 @@ noremap <C-l> <C-W>l
 nnoremap <silent> T :term ++close<CR>
 
 nnoremap <silent> <leader>e :exit<cr>
+
+" Copy/Paste/Cut
+if has('unnamedplus')
+  set clipboard=unnamed,unnamedplus
+endif
+if has('macunix')
+  " pbcopy for OSX copy/paste
+  vmap <C-x> :!pbcopy<CR>
+  vmap <C-c> :w !pbcopy<CR><CR>
+endif
