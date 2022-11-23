@@ -27,5 +27,9 @@ Plug 'fladson/vim-kitty'                            " Syntax highlighting for ki
 Plug 'vim-airline/vim-airline'                      " Status bar
 Plug 'vim-airline/vim-airline-themes'               " Status bar themes
 Plug 'tpope/vim-vinegar'                            " file explorer
+Plug 'Raimondi/delimitMate'                         " Automatic closing of quotes, parenthesis, brackets, etc
+Plug 'xolox/vim-misc'                               " Vim sessions
+Plug 'xolox/vim-session'
+Plug 'Yggdroot/indentLine'                          " Display thin vertical lines at each indentation level
 
 call plug#end()
