@@ -21,14 +21,36 @@ set colorcolumn=110
 highlight ColorColumn ctermbg=darkgray
 set termguicolors
 set bg=dark
-set term=xterm-256color
-if &term =~ '256color'
-  set t_ut=
-endif
 set title
 set titleold="Terminal"
 set titlestring=%F
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\%{fugitive#statusline()}
+set t_Co=256
+set guioptions=egmrti
+set gfn=Monospace\ 10
+if &term =~ '256color'
+  set t_ut=
+endif
+
+" mouse support
+set mouse=a
+set mousemodel=popup
+
+
+if has("gui_running")
+  if has("gui_mac") || has("gui_macvim")
+    set guifont=Menlo:h12
+    set transparency=7
+  endif
+else
+  if $COLORTERM == 'gnome-terminal'
+    set term=gnome-256color
+  else
+    if $TERM == 'xterm'
+      set term=xterm-256color
+    endif
+  endif
+endif
 
 " File directory
 let g:netrw_banner = 0 " ---------------- remove directory banner
@@ -73,6 +95,9 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   " Also switch on highlighting the last used search pattern.
   syntax on
 endif
+
+" Better command line completion
+set wildmenu
 
 " Search
 set incsearch "    --------------------------- Find the next match as we type the search
