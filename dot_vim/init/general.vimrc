@@ -135,3 +135,5 @@ if has('macunix')
   vmap <C-x> :!pbcopy<CR>
   vmap <C-c> :w !pbcopy<CR><CR>
 endif
+
+nnoremap <Leader>sh :!<Space>
