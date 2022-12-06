@@ -154,6 +154,8 @@ function docker-clean {
     docker images -f "dangling=true" -q | xargs docker rmi
 }
 
+t () { mkdir -p "$(dirname "$1")" && touch "$1" ; }
+
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
