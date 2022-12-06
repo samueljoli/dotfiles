@@ -23,3 +23,5 @@ nnoremap <silent> <Leader>f :Files<Enter>
 
 " open silver searcher for word under cursor
 nnoremap <silent> <Leader>ag :Ag -w <C-R><C-W><CR>
+
+nnoremap <silent> <Leader>b :Buffers<Enter>
