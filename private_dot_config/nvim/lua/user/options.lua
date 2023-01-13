@@ -11,6 +11,7 @@ vim.opt.numberwidth = 4                         -- set number column width to 2 
 vim.opt.signcolumn = "yes"                      -- always show the sign column, otherwise it would shift the text each time
 vim.opt.wrap = false                            -- display lines as one long line
 vim.opt.shortmess:append "c"
+vim.o.background = "dark"                       -- set background
 
 -- Search
 vim.opt.hlsearch = true                         -- highlight all matches on previous search pattern
@@ -40,7 +41,7 @@ vim.opt.conceallevel = 0                        -- so that `` is visible in mark
 vim.opt.ignorecase = true                       -- ignore case in search patterns
 vim.opt.mouse = "a"                             -- allow the mouse to be used in neovim
 vim.opt.smartcase = true                        -- smart case
--- vim.opt.termguicolors = true                    -- set term gui colors (most terminals support this)
+vim.opt.termguicolors = true                    -- set term gui colors (most terminals support this)
 vim.opt.timeoutlen = 1000                       -- time to wait for a mapped sequence to complete (in milliseconds)
 vim.opt.undofile = true                         -- enable persistent undo
 vim.opt.updatetime = 300                        -- faster completion (4000ms default)
