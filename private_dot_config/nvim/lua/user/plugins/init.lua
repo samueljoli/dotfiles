@@ -6,6 +6,8 @@ require('user.plugins.lualine.setup')
 
 require('user.plugins.bufferline.setup')
 
+require('user.plugins.bbye.setup')
+
 return require('user.plugins.packer.setup').startup(function(use)
 
   use 'wbthomason/packer.nvim'       -- Have packer manage itself
@@ -25,6 +27,7 @@ return require('user.plugins.packer.setup').startup(function(use)
       tag = "v3.*",
       requires = 'nvim-tree/nvim-web-devicons'
   }
+  use 'moll/vim-bbye'                -- better buffer delete
 
   if PACKER_BOOTSTRAP then           -- Automatically set up your configuration after cloning packer.nvim
     require("packer").sync()
