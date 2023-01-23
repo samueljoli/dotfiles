@@ -48,5 +48,5 @@ vim.opt.updatetime = 300                        -- faster completion (4000ms def
 vim.opt.writebackup = false                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
 vim.opt.scrolloff = 8                           -- is one of my fav
 vim.opt.sidescrolloff = 8
-vim.cmd "set whichwrap+=<,>,[,],h,l"
-vim.cmd [[set iskeyword+=-]]
+-- vim.cmd "set whichwrap+=<,>,[,],h,l"
+-- vim.cmd [[set iskeyword+=-]]

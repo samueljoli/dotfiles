@@ -1,25 +1,11 @@
-require('user.plugins.gruvbox.setup')
-
-require('user.plugins.fzf.setup')
-
-require('user.plugins.lualine.setup')
-
-require('user.plugins.bufferline.setup')
-
-require('user.plugins.bbye.setup')
-
-require('user.plugins.workspaces.setup')
-
-require('user.plugins.projectconfig.setup')
-
-require('user.plugins.lsp_zero.setup')
-
 return require('user.plugins.packer.setup').startup(function(use)
 
   use 'wbthomason/packer.nvim'       -- Have packer manage itself
   use 'nvim-lua/popup.nvim'          -- An implementation of the Popup API from vim in Neovim
   use 'nvim-lua/plenary.nvim'        -- Useful lua functions used in lots of plugins
-  use 'ellisonleao/gruvbox.nvim'     -- gruvebox color scheme
+  use 'ellisonleao/gruvbox.nvim'     -- gruvbox color scheme
+  use 'thedenisnikulin/vim-cyberpunk'-- cyberpunk theme
+  use { 'kartikp10/noctis.nvim', requires = { 'rktjmp/lush.nvim' } }
   use { 'ibhagwan/fzf-lua',          -- Fuzzy finder
       -- optional for icon support
       requires = { 'nvim-tree/nvim-web-devicons' }
@@ -57,6 +43,42 @@ return require('user.plugins.packer.setup').startup(function(use)
   }
   use 'natecraddock/workspaces.nvim'   --  workspaces
   use 'windwp/nvim-projectconfig'      -- project specific config files
+  use 'tpope/vim-fugitive'             -- git
+  use 'tpope/vim-surround'
+  use {
+	"windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+  }
+  use {
+    'nvim-tree/nvim-tree.lua', -- File Explorer
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    },
+    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  }
+  use 'MunifTanjim/nui.nvim' -- UI component lib for neovim
+  use 'rcarriga/nvim-notify'
+  use({
+      "folke/noice.nvim",
+      requires = {
+        "MunifTanjim/nui.nvim",
+        "rcarriga/nvim-notify",
+      }
+  })
+  use 'stevearc/dressing.nvim'
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+  }
+  use 'natecraddock/sessions.nvim'
+  use 'folke/todo-comments.nvim'
+  use {
+      "folke/trouble.nvim",
+      requires = "nvim-tree/nvim-web-devicons",
+  }
+  use 'goolord/alpha-nvim'
 
   if PACKER_BOOTSTRAP then           -- Automatically set up your configuration after cloning packer.nvim
     require("packer").sync()
