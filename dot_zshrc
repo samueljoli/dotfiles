@@ -130,6 +130,17 @@ function dot {
 		chezmoi update
 		return 0
 	fi
+
+	if [[ "$1" == "nvim" ]]; then
+        if [ -z "$2" ]; then
+            chezmoi edit ~/.config/nvim/init.lua
+            return 0
+        else
+            chezmoi edit ~/.config/nvim/lua/user/plugins/$2/setup.lua
+            return 0
+        fi
+	fi
+
 	chezmoi "$1" ~/."$2"
 }
 
