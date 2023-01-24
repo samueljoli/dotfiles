@@ -79,6 +79,7 @@ return require('user.plugins.packer.setup').startup(function(use)
       requires = "nvim-tree/nvim-web-devicons",
   }
   use 'goolord/alpha-nvim'
+  use 'airblade/vim-gitgutter'
 
   if PACKER_BOOTSTRAP then           -- Automatically set up your configuration after cloning packer.nvim
     require("packer").sync()
