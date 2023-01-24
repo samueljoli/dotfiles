@@ -11,3 +11,5 @@ require("fzf-lua").setup({
 keymap("n", "<leader>f", ":FzfLua files<cr>", opts) -- open file search
 
 keymap("n", "<leader>ag", ":FzfLua grep_cword<cr>", opts) -- search for current word under cursor
+
+keymap("n", "<leader>lg", ":FzfLua live_grep<cr>", opts) -- open file search
