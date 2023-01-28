@@ -136,7 +136,7 @@ function dot {
             chezmoi edit ~/.config/nvim/init.lua
             return 0
         else
-            chezmoi edit ~/.config/nvim/lua/user/plugins/$2/setup.lua
+            chezmoi edit ~/.config/nvim/lua/user/plugins/$2
             return 0
         fi
 	fi
