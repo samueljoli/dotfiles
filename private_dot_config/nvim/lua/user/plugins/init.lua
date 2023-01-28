@@ -80,6 +80,7 @@ return require('user.plugins.packer.setup').startup(function(use)
   }
   use 'goolord/alpha-nvim'
   use 'airblade/vim-gitgutter'
+  use 'knubie/vim-kitty-navigator'
 
   if PACKER_BOOTSTRAP then           -- Automatically set up your configuration after cloning packer.nvim
     require("packer").sync()
