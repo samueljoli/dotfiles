@@ -6,6 +6,7 @@ return require('user.plugins.packer.setup').startup(function(use)
   use 'ellisonleao/gruvbox.nvim'     -- gruvbox color scheme
   use 'thedenisnikulin/vim-cyberpunk'-- cyberpunk theme
   use { 'kartikp10/noctis.nvim', requires = { 'rktjmp/lush.nvim' } }
+  use 'nvim-tree/nvim-web-devicons'
   use { 'ibhagwan/fzf-lua',          -- Fuzzy finder
       -- optional for icon support
       requires = { 'nvim-tree/nvim-web-devicons' }
@@ -80,7 +81,10 @@ return require('user.plugins.packer.setup').startup(function(use)
   }
   use 'goolord/alpha-nvim'
   use 'airblade/vim-gitgutter'
-  use 'knubie/vim-kitty-navigator'
+  use {
+    'knubie/vim-kitty-navigator',
+    run = 'cp ./*.py ~/.config/kitty/'
+  }
 
   if PACKER_BOOTSTRAP then           -- Automatically set up your configuration after cloning packer.nvim
     require("packer").sync()
