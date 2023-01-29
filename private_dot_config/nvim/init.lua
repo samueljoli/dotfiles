@@ -1,7 +1,3 @@
-require 'user.options'
-
-require 'user.keymaps'
-
 require 'user.plugins'
 
 require 'user.plugins.cyberpunk.setup'
@@ -33,3 +29,7 @@ require 'user.plugins.lualine.setup' -- neovim startup conflict
 require 'user.plugins.trouble.setup'
 
 require 'user.plugins.alpha.setup'
+
+require 'user.options'
+
+require 'user.keymaps'
