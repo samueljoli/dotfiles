@@ -1,3 +1,5 @@
+require 'user.keymaps'
+
 require 'user.plugins'
 
 require 'user.plugins.cyberpunk.setup'
@@ -32,6 +34,6 @@ require 'user.plugins.alpha.setup'
 
 require 'user.plugins.indent-blankline.setup'
 
-require 'user.options'
+require 'user.plugins.vim-test.setup'
 
-require 'user.keymaps'
+require 'user.options'
