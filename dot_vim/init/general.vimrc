@@ -77,9 +77,9 @@ set cursorline " ------------------------ cursor line
 set smartindent " ----------------------- smart indenting when starting a new line
 set smarttab " -------------------------- tab in front of a line inserts blanks
 set autoindent " ------------------------ copy indent from current line when starting a new line
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab " ------------------------- in insert mode use the appropriate number of spaces to insert a tab
 
 " No swap files
