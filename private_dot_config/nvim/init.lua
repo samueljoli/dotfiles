@@ -30,6 +30,8 @@ require 'user.plugins.trouble.setup'
 
 require 'user.plugins.alpha.setup'
 
+require 'user.plugins.indent-blankline.setup'
+
 require 'user.options'
 
 require 'user.keymaps'

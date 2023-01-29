@@ -85,6 +85,7 @@ return require('user.plugins.packer.setup').startup(function(use)
     'knubie/vim-kitty-navigator',
     run = 'cp ./*.py ~/.config/kitty/'
   }
+  use "lukas-reineke/indent-blankline.nvim"
 
   if PACKER_BOOTSTRAP then           -- Automatically set up your configuration after cloning packer.nvim
     require("packer").sync()
