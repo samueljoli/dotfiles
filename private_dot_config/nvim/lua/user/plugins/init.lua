@@ -86,7 +86,7 @@ return require('user.plugins.packer.setup').startup(function(use)
     run = 'cp ./*.py ~/.config/kitty/'
   }
   use "lukas-reineke/indent-blankline.nvim"
-  use "samueljoli/vim-test"
+  use "vim-test/vim-test"
 
   if PACKER_BOOTSTRAP then -- Automatically set up your configuration after cloning packer.nvim
     require("packer").sync()
