@@ -17,11 +17,14 @@ vim.o.background = "dark"                       -- set background
 vim.opt.hlsearch = true                         -- highlight all matches on previous search pattern
 
 -- Tabs
+vim.opt.smartindent = true                      -- make indenting smarter again
+vim.opt.smarttab = true
+vim.opt.autoindent = true
+vim.opt.tabstop = 2                             -- insert 2 spaces for a tab
+vim.opt.shiftwidth = 2                          -- the number of spaces inserted for each indentation
+vim.opt.softtabstop = 2
 vim.opt.showtabline = 2                         -- always show tabs
 vim.opt.expandtab = true                        -- convert tabs to spaces
-vim.opt.shiftwidth = 2                          -- the number of spaces inserted for each indentation
-vim.opt.tabstop = 2                             -- insert 2 spaces for a tab
-vim.opt.smartindent = true                      -- make indenting smarter again
 
 -- Window Management
 vim.opt.splitbelow = true                       -- force all horizontal splits to go below current window
