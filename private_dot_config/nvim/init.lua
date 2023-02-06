@@ -36,4 +36,6 @@ require 'user.plugins.indent-blankline.setup'
 
 require 'user.plugins.vim-test.setup'
 
+require 'user.plugins.hop.setup'
+
 require 'user.options'

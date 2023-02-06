@@ -87,6 +87,11 @@ return require('user.plugins.packer.setup').startup(function(use)
   }
   use "lukas-reineke/indent-blankline.nvim"
   use "vim-test/vim-test"
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v2',
+  }
+
 
   if PACKER_BOOTSTRAP then -- Automatically set up your configuration after cloning packer.nvim
     require("packer").sync()
