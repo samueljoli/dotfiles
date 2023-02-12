@@ -56,6 +56,13 @@ lsp.setup_nvim_cmp({
   })
 })
 
-vim.cmd [[:autocmd BufWritePost * LspZeroFormat]] -- Format on save
+lsp.on_attach(function(client, bufnr)
+  local opts = { buffer = bufnr }
+  local bind = vim.keymap.set
+
+  bind('n', 'rn', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
+end)
+
+-- vim.cmd [[:autocmd BufWritePost * LspZeroFormat]] -- Format on save
 
 lsp.setup()
