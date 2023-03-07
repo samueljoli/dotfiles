@@ -8,6 +8,8 @@ lsp.set_preferences({
   suggest_lsp_servers = true,
 })
 
+lsp.skip_server_setup({'rust_analyzer'})
+
 -- Fix Undefined global 'vim'
 lsp.configure('sumneko_lua', {
   settings = {
@@ -66,3 +68,33 @@ end)
 -- vim.cmd [[:autocmd BufWritePost * LspZeroFormat]] -- Format on save
 
 lsp.setup()
+
+local rust_lsp = lsp.build_options('rust_analyzer', {
+  single_file_support = false,
+  on_attach = function(client, bufnr)
+    print('hello rust-tools')
+  end,
+  settings = {
+    ["rust-analyzer"] = {
+      assist = {
+          importEnforceGranularity = true,
+          importPrefix = 'crate',
+      },
+      cargo = {
+          allFeatures = true,
+      },
+      checkOnSave = {
+          command = 'clippy',
+      },
+      inlayHints = { locationLinks = false },
+      diagnostics = {
+          enable = true,
+          experimental = {
+              enable = true,
+          },
+      },
+    }
+  }
+})
+
+require('rust-tools').setup({server = rust_lsp})

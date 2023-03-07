@@ -91,6 +91,8 @@ return require('user.plugins.packer.setup').startup(function(use)
     'phaazon/hop.nvim',
     branch = 'v2',
   }
+  use 'simrat39/rust-tools.nvim'
+  use 'mfussenegger/nvim-dap'
 
 
   if PACKER_BOOTSTRAP then -- Automatically set up your configuration after cloning packer.nvim
