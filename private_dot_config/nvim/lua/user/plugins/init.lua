@@ -9,7 +9,8 @@ return require('user.plugins.packer.setup').startup(function(use)
   use 'nvim-tree/nvim-web-devicons'
   use { 'ibhagwan/fzf-lua', -- Fuzzy finder
     -- optional for icon support
-    requires = { 'nvim-tree/nvim-web-devicons' }
+    requires = { 'nvim-tree/nvim-web-devicons' },
+    commit = "d4c2e3f32da453afb55e1becbe4b92357576db9b"
   }
   use {
     'nvim-lualine/lualine.nvim', -- statusline
@@ -93,6 +94,27 @@ return require('user.plugins.packer.setup').startup(function(use)
   }
   use 'simrat39/rust-tools.nvim'
   use 'mfussenegger/nvim-dap'
+  use {
+    'samueljoli/cyberpunk.nvim',
+    config = function()
+      require('cyberpunk').setup()
+    end
+  }
+  use {
+    'norcalli/nvim-colorizer.lua',
+    config = function()
+      require('colorizer').setup()
+    end
+  }
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate',
+  }
+  use({
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    after = "nvim-treesitter",
+    requires = "nvim-treesitter/nvim-treesitter",
+  })
 
 
   if PACKER_BOOTSTRAP then -- Automatically set up your configuration after cloning packer.nvim

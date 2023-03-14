@@ -17,6 +17,6 @@ vim.opt.listchars:append "eol:↴"
 
 indent_blankline.setup({
   space_char_blankline = " ",
-  -- show_current_context = true, won't work until I install and properly configure treesitter
+  -- show_current_context = true, -- won't work until I install and properly configure treesitter
   show_current_context_start = true,
 })

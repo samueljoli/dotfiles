@@ -2,7 +2,7 @@ require 'user.keymaps'
 
 require 'user.plugins'
 
-require 'user.plugins.cyberpunk.setup'
+require 'user.plugins.nvim-treesitter.setup'
 
 require 'user.plugins.fzf.setup'
 
