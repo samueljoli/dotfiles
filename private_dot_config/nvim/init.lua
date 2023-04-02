@@ -4,6 +4,8 @@ require 'user.plugins'
 
 require 'user.plugins.nvim-treesitter.setup'
 
+require 'user.plugins.nvim-treesitter-textobjects.setup'
+
 require 'user.plugins.fzf.setup'
 
 require 'user.plugins.bufferline.setup'
