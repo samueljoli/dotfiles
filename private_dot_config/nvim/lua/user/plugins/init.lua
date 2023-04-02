@@ -95,6 +95,12 @@ return require('user.plugins.packer.setup').startup(function(use)
   use 'simrat39/rust-tools.nvim'
   use 'mfussenegger/nvim-dap'
   use {
+    'samueljoli/hurl.nvim', -- hurl filetype syntax highlighting
+    config = function()
+      require('hurl').setup()
+    end
+  }
+  use {
     'samueljoli/cyberpunk.nvim',
     config = function()
       require('cyberpunk').setup()
