@@ -10,16 +10,7 @@ lsp.set_preferences({
 
 lsp.skip_server_setup({'rust_analyzer'})
 
--- Fix Undefined global 'vim'
-lsp.configure('sumneko_lua', {
-  settings = {
-    Lua = {
-      diagnostics = {
-        globals = { 'vim' }
-      }
-    }
-  }
-})
+lsp.nvim_workspace()
 
 -- Mappings
 local has_words_before = function()
